@@ -33,4 +33,4 @@ rm wrapper-${TANUKI_SO}-${TANUKI_CPU}-${TANUKI_BIT}-${TANUKI_VERSION}.tar.gz
 rm -rf wrapper-${TANUKI_SO}-${TANUKI_CPU}-${TANUKI_BIT}-${TANUKI_VERSION}
 
 # Fix mule script
-gsed -i 's/case "$PROC_ARCH" in/case "$PROC_ARCH" in\n        arm64)\n            DIST_ARCH="arm"\n            DIST_BITS="64"\n            break;;/' ./mule-standalone-${MULE_VERSION}/bin/mule
+gsed -i 's/case "$PROC_ARCH" in/case "$PROC_ARCH" in\n        arm64 | aarch64)\n            DIST_ARCH="arm"\n            DIST_BITS="64"\n            break;;/' ./mule-standalone-${MULE_VERSION}/bin/mule
